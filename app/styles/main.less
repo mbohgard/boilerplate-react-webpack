@@ -1,0 +1,27 @@
+@import 'reset';
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#icons {
+    display: none;
+}
+
+@keyframes spinner {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
+
+@-webkit-keyframes spinner {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(360deg) }
+}
