@@ -1,20 +1,20 @@
-var React = require('react');
-var Reflux = require('reflux');
+import React from 'react';
+import Reflux from 'reflux';
 
 // load all icon definitions
-var icons = require('html!../images/icons.html');
+import icons from 'html!../images/icons.html'
 
 var App = React.createClass({
 
-  render: function() {
+  render() {
     return (
       <div>
         <div id="icons" dangerouslySetInnerHTML={{__html: icons}} />
-        Hello world
+        Hello worlds
       </div>
     );
   }
 
 });
 
-module.exports = App;
+export default App;
