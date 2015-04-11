@@ -15,10 +15,11 @@ var config = {
     resolve: {
         alias: {}
     },
+    devtool: 'eval-source-map',
     module: {
         noParse: [],
         loaders: [
-            { test: /\.(js|jsx)$/, loader: 'jsx', exclude: [node_modules_dir] },
+            { test: /\.(js|jsx)$/, loader: 'babel', exclude: [node_modules_dir] },
             { test: /\.less$/, loader: 'style!css!less' },
             { test: /\.(woff|png|svg)$/, loader: 'url?limit=100000' }
         ]

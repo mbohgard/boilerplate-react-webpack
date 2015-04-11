@@ -10,6 +10,7 @@ var App = React.createClass({
     return (
       <div>
         <div id="icons" dangerouslySetInnerHTML={{__html: icons}} />
+        Hello world
       </div>
     );
   }
