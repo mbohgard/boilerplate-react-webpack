@@ -1,6 +1,7 @@
-var webpack = require('webpack');
-var path = require('path');
-var node_modules_dir = path.join(__dirname, 'node_modules');
+var webpack = require('webpack'),
+    path = require('path'),
+    node_modules_dir = path.join(__dirname, 'node_modules'),
+    production = path.resolve(__dirname, process.env.NODE_ENV === 'production';
 
 var config = {
     context: __dirname,
@@ -9,13 +10,13 @@ var config = {
     },
     output: {
         publicPath: '/',
-        path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? './dist/' : './build'),
+        path: production ? './dist/' : './build'),
         filename: 'bundle.js'
     },
     resolve: {
         alias: {}
     },
-    devtool: 'eval-source-map',
+    devtool: production ? 'eval-source-map' : '',
     module: {
         noParse: [],
         loaders: [
