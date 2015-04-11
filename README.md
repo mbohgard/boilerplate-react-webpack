@@ -1,2 +1,2 @@
 # boilerplate-react-webpack
-Boilerplate for new project with React, Webpack and LESS css
+Boilerplate for new React ES6 project with Webpack and LESS.
