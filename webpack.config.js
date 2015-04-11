@@ -1,22 +1,20 @@
-var webpack = require('webpack'),
-    path = require('path'),
-    node_modules_dir = path.join(__dirname, 'node_modules'),
-    production = path.resolve(__dirname, process.env.NODE_ENV === 'production';
+var webpack = require('webpack');
+var path = require('path');
+var node_modules_dir = path.join(__dirname, 'node_modules');
 
-var config = {
+    config = {
     context: __dirname,
     entry: {
         app: ['webpack/hot/dev-server', './app/main.jsx']
     },
     output: {
         publicPath: '/',
-        path: production ? './dist/' : './build'),
+        path: path.resolve(__dirname, process.env.NODE_ENV === 'production' ? './dist/' : './build'),
         filename: 'bundle.js'
     },
     resolve: {
         alias: {}
     },
-    devtool: production ? 'eval-source-map' : '',
     module: {
         noParse: [],
         loaders: [

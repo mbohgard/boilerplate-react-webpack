@@ -1,10 +1,14 @@
 {
-  "name": "",
+  "name": "boilerplate",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbohgard/boilerplate-react-webpack.git"
+  },
   "description": "",
   "main": "app/main.js",
   "scripts": {
-    "dev": "webpack-dev-server --progress --colors --hot --content-base build/",
+    "dev": "webpack-dev-server --devtool eval-source-map --progress --colors --hot --content-base build/",
     "deploy": "NODE_ENV=production webpack -p"
   },
   "author": "",
