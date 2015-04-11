@@ -3,10 +3,6 @@ var path = require('path');
 var node_modules_dir = path.join(__dirname, 'node_modules');
 
 var config = {
-    addVendor: function (name, path) {
-        this.resolve.alias[name] = path;
-        this.module.noParse.push(path);
-    },
     context: __dirname,
     entry: {
         app: ['webpack/hot/dev-server', './app/main.jsx']
