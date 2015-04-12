@@ -1,7 +1,9 @@
-var Reflux = require('reflux');
-var AppActions = require('../actions/actions.js');
+import React from 'react';
+import Reflux from 'reflux';
 
-var AppStore = Reflux.createStore({
+import AppActions from '../actions/actions';;
+
+export default Reflux.createStore({
   listenables: [AppActions],
 
   data: {
@@ -12,10 +14,16 @@ var AppStore = Reflux.createStore({
    * function to be run on initialization
    * @return undefined
    */
-  init: function () {
+  init() {
     console.log('initializing store...');
   },
 
-});
+  /**
+   * called on getAll action trigger
+   * @return undefined
+   */
+  onGetAll() {
+    console.log('getAll action triggered')
+  }
 
-module.exports = AppStore;
+});

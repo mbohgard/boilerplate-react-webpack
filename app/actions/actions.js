@@ -1,5 +1,7 @@
 var Reflux = require('reflux');
 
-module.exports = Reflux.createActions([
+import Reflux from 'reflux';
 
+export default Reflux.createActions([
+  "getAll"      // sample getAll action
 ]);
