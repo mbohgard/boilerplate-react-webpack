@@ -7,17 +7,21 @@ import AppStore from '../stores/store';
 // load all icon definitions
 import icons from 'html!../images/icons.html'
 
-var App = React.createClass({
+export default React.createClass({
+
+  getInitialState() {
+    return {
+      user: 'world'
+    }
+  },
 
   render() {
     return (
       <div>
         <div id="icons" dangerouslySetInnerHTML={{__html: icons}} />
-        Hello worlds
+        Hello {this.state.user}!
       </div>
-    );
+    )
   }
 
 });
-
-export default App;

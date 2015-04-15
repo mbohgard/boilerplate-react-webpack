@@ -15,7 +15,7 @@ export default Reflux.createStore({
    * @return undefined
    */
   init() {
-    console.log('initializing store...');
+    console.log('initializing store...')
   },
 
   /**
